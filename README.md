@@ -2,6 +2,9 @@
 
 tl;dr WIP
 
+[devd](https://github.com/cortesi/devd) is a great livereload, reverse proxy, and latency + bandwidth simulation tool. 
+devd pairs especially well with [Jekyll](https://github.com/jekyll/jekyll) and [Django](https://github.com/django/django).
+
 ## Using with Docker Compose
 
 ```yaml
