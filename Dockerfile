@@ -8,6 +8,6 @@ ENV PORT=$PORT_ARG
 ARG ROUTE_ARG=/srv/jekyll/_site
 ENV ROUTE=$ROUTE_ARG
 
-ENTRYPOINT devd --address=0.0.0.0 --port=${PORT} ${ROUTE}
+ENTRYPOINT ["/bin/sh", "-c", "exec devd --address=0.0.0.0 --port=${PORT} ${ROUTE} $@"]
 
 EXPOSE $PORT
