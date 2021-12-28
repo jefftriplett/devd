@@ -5,11 +5,11 @@ RUN go get github.com/cortesi/devd/cmd/devd
 ARG PORT_ARG=8000
 ENV PORT=$PORT_ARG
 
-ARG ROUTE_ARG="/srv/jekyll/_site"
+ARG ROUTE_ARG=/srv/jekyll/_site
 ENV ROUTE=$ROUTE_ARG
 
-ENTRYPOINT ["devd", "--address=0.0.0.0", "--port=$PORT"]
+ENTRYPOINT ["/bin/sh", "-c", "exec devd --address=0.0.0.0 --port=${PORT} $0"]
 
-CMD ["$ROUTE"]
+CMD ["/bin/sh", "-c", "exec echo ${ROUTE}"]
 
 EXPOSE $PORT
