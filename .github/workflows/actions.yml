@@ -10,13 +10,10 @@ on:
     paths-ignore:
       - "**.md"
   repository_dispatch:
+  # uncomment this for nightly builds...
   # schedule:
   #   # https://crontab.guru/#0_7_*_*_*
   #   - cron: "0 7 * * *"
-
-env:
-  DOCKER_IMAGE: "jefftriplett/devd"
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   lint-dockerfile:
