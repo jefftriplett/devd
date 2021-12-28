@@ -59,3 +59,7 @@ jobs:
           push: ${{ github.ref == 'refs/heads/main' }}
           tags: |
             ghcr.io/${{ github.repository }}:latest
+
+      - uses: actions/delete-package-versions@v2
+        with:
+          min-versions-to-keep: 4
