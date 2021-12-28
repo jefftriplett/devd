@@ -10,6 +10,6 @@ ENV ROUTE=$ROUTE_ARG
 
 ENTRYPOINT ["devd", "--address=0.0.0.0", "--port=$PORT"]
 
-EXPOSE $PORT_ARG
+CMD ["$ROUTE"]
 
-CMD [$ROUTE_ARG]
+EXPOSE $PORT
