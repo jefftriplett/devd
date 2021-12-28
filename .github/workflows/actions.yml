@@ -35,6 +35,7 @@ jobs:
             hadolint Dockerfile
 
   docker:
+    needs: lint-dockerfile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
