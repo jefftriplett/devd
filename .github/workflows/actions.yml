@@ -60,6 +60,12 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}:latest
 
-      - uses: actions/delete-package-versions@v2
+  delete-outdated-packages:
+    needs: docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cleanup old packages
+        uses: actions/delete-package-versions@v2
         with:
           min-versions-to-keep: 4
+          package-name: devd
