@@ -68,4 +68,4 @@ jobs:
         uses: actions/delete-package-versions@v2
         with:
           min-versions-to-keep: 4
-          package-name: devd
+          package-name: latest
