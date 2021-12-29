@@ -9,7 +9,7 @@ on:
       - main
     paths-ignore:
       - "**.md"
-  repository_dispatch:
+  workflow_dispatch:
   # uncomment this for nightly builds...
   # schedule:
   #   # https://crontab.guru/#0_7_*_*_*
